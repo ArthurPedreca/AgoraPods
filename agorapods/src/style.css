@@ -5,6 +5,15 @@
   --secondary-color: #2ecc71;
   --text-color: #4e4e4e;
 }
+body{
+  max-width: 1200px; 
+  width: 100%; 
+  position: absolute; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  box-sizing: border-box; 
+  padding: 10px;
+}
 
 *{
   margin: 0;
