@@ -7,8 +7,12 @@ import imageSrc from "../assets/imgs/card.png";
   <main>
     <section>
       <div class="banners">
-        <img class="banner" src="../assets/imgs/banner.avif" alt="Banner principal" />
-        <img class="imagem" src="../assets/imgs/image.jpg" alt="Imagem lateral" />
+        <div class="banner-wrapper">
+          <img class="banner" src="../assets/imgs/banner.avif" alt="Banner principal" />
+        </div>
+        <div class="image-wrapper">
+          <img class="imagem" src="../assets/imgs/image.jpg" alt="Imagem lateral" />
+        </div>
       </div>
       <div class="cards">
         <Card backgroundColor="Roxo" text="Descartáveis" :imageSrc="imageSrc" />
@@ -33,15 +37,13 @@ main {
 
 .cards {
   display: flex;
+  justify-content: space-between;
 }
 
-.imagem {
-  width: 400px;
-  height: 400px;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  border-radius: 1rem;
-  margin-left: 10px;
+.banner-wrapper, .image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .banner {
@@ -52,18 +54,45 @@ main {
   border-radius: 1rem;
 }
 
+.imagem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
 .banners {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
+  gap: 20px; /* Espaço entre o banner e a imagem lateral */
+  height: auto; /* Ajusta a altura automaticamente */
 }
 
+.banner-wrapper {
+  flex: 2;
+  height: auto; /* A altura será definida automaticamente */
+}
+
+.image-wrapper {
+  flex: 1;
+  height: auto; /* A altura será definida automaticamente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagem {
+  max-height: 100%; /* Garante que a imagem não ultrapasse a altura do contêiner */
+  aspect-ratio: 3 / 4; /* Mantém a proporção de 3/4 */
+}
+  
 section {
-  max-width: 1200px; 
-  width: 100%; 
-  position: absolute; 
-  left: 50%; 
-  transform: translateX(-50%); 
-  box-sizing: border-box; 
+  max-width: 1200px;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
 }
 </style>

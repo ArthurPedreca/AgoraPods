@@ -61,11 +61,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 250px;
+    width: 200px;
     height: 250px;
     border-radius: 1rem;
-    margin: 25px;
     cursor: pointer;
+    margin-top: 35px;
     overflow: hidden;
   }
   
