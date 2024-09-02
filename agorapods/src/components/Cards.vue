@@ -70,7 +70,7 @@
   }
   
   .card img {
-    width: 100%;
+    width: 125%;
     transition: transform 0.3s ease;
   }
   

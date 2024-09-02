@@ -4,7 +4,7 @@
   --primary-color: #3498db;
   --secondary-color: #2ecc71;
   --text-color: #4e4e4e;
-  --gray-color:rgba(128, 128, 128, 0.13)
+  --gray-color:rgba(128, 128, 128, 0.33)
 }
 body{
   max-width: 1200px; 
