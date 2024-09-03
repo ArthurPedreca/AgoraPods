@@ -20,20 +20,28 @@ import CardProduto from "../components/CardProduto.vue";
 
   <div class="produtos">
     <img class="frame" src="../assets/imgs/frame.jpg" alt="">
-    <div class="cads_produtos">
-      <CardProduto title="Nicsalt Ignite Subzero 35mg 30ml" originalPrice="R$ 99,90"
+
+    
+
+
+
+      <div class="cards_produtos">
+      <CardProduto class="card" title="Nicsalt Ignite Subzero 35mg 30ml" originalPrice="R$ 99,90"
         installment="3x de R$ 33,30 s/ juros" pixPrice="R$ 89,91 no pix"
         imageSrc="https://lojapodvape.com/wp-content/uploads/2024/08/Nicsalt-Ignite-30ml-174x178.jpg" />
-      <CardProduto title="Nicsalt Ignite Subzero 35mg 30ml" originalPrice="R$ 99,90"
+      <CardProduto class="card" title="Nicsalt Ignite Subzero 35mg 30ml" originalPrice="R$ 99,90"
         installment="3x de R$ 33,30 s/ juros" pixPrice="R$ 89,91 no pix"
         imageSrc="https://lojapodvape.com/wp-content/uploads/2024/08/Nicsalt-Ignite-30ml-174x178.jpg" />
-      <CardProduto title="Nicsalt Ignite Subzero 35mg 30ml" originalPrice="R$ 99,90"
+      <CardProduto class="card" title="Nicsalt Ignite Subzero 35mg 30ml" originalPrice="R$ 99,90"
         installment="3x de R$ 33,30 s/ juros" pixPrice="R$ 89,91 no pix"
         imageSrc="https://lojapodvape.com/wp-content/uploads/2024/08/Nicsalt-Ignite-30ml-174x178.jpg" />
-      <CardProduto title="Nicsalt Ignite Subzero 35mg 30ml" originalPrice="R$ 99,90"
+        <CardProduto class="card" title="Nicsalt Ignite Subzero 35mg 30ml" originalPrice="R$ 99,90"
         installment="3x de R$ 33,30 s/ juros" pixPrice="R$ 89,91 no pix"
         imageSrc="https://lojapodvape.com/wp-content/uploads/2024/08/Nicsalt-Ignite-30ml-174x178.jpg" />
+
+      
     </div>
+
   </div>
 
 
@@ -46,15 +54,22 @@ import CardProduto from "../components/CardProduto.vue";
   flex-wrap: wrap;
 }
 
-.produtos {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  margin-top: 40px;
-}
-
 .frame {
   margin-top: 16px;
+}
+.produtos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.cards_produtos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-gap: 25px;
+  justify-items: center; 
+  width: 100%;
+  max-width: 1200px; 
 }
 
 .produtos img {
@@ -63,12 +78,6 @@ import CardProduto from "../components/CardProduto.vue";
   aspect-ratio: 3 / 4;
 }
 
-.cads_produtos {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  width: 100%;
-}
 
 .banner-wrapper,
 .image-wrapper {
